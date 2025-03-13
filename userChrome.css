@@ -1199,3 +1199,29 @@ treecol {
 /*TODO some of the usual buttons that appear on the right-click context menu are hidden. right now you can change them at the top of `userChrome.css`. i will maybe later introduce `about:config` variables for easier customization */
 /*TODO autoscroller styles */
 /*TODO pointer events on urlbar*/
+
+
+/* Unified Extension Menu Compact */
+#unified-extensions-view{
+	--uei-icon-size: 16px;
+  }
+  .unified-extensions-item-menu-button.subviewbutton{
+	padding: 0px !important;
+	margin-inline-end: 0 !important;
+  }
+  .unified-extensions-item-action-button.subviewbutton{
+	padding-block: 6px !important;
+  }
+  .unified-extensions-item-menu-button.subviewbutton > .toolbarbutton-icon{
+	padding: 4px !important;
+  }
+  .unified-extensions-item-message-deck{
+	display: none
+  }
+  #unified-extensions-view > vbox > vbox > .unified-extensions-item{
+	padding-block: 0px !important;
+  }
+  #unified-extensions-panel .unified-extensions-item{
+	margin-block: 0 !important;
+  }
+  
