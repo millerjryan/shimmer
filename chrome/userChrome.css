@@ -1,9 +1,51 @@
 /*! SHIMMMER v2.28 */
 /*? https://github.com/nuclearcodecat/shimmer */
 
+/* bookmark icons */
+#PlacesToolbar .bookmark-item[label="Banks"][container=true] > .toolbarbutton-icon {
+list-style-image: url("bank.svg") !important;
+}
 
+#personal-bookmarks .bookmark-item[label="Banks"][container=true] > .menu-iconic-left > .menu-iconic-icon {
+list-style-image: url("bank.svg") !important;
+}
+#PlacesToolbar .bookmark-item[label="Server"][container=true] > .toolbarbutton-icon {
+list-style-image: url("server.svg") !important;
+}
 
-/* browser toolbox prompt hack - set devtools.debugger.prompt-connection to false */
+#personal-bookmarks .bookmark-item[label="Server"][container=true] > .menu-iconic-left > .menu-iconic-icon {
+list-style-image: url("server.svg") !important;
+}
+
+/* Extension color Icons */
+/* make Linguist extension toolbar icon white */
+toolbarbutton#_74674eef-80d9-4cd3-af95-72ee34c0f2b6_-BAP .toolbarbutton-icon
+{
+	list-style-image: url('icons/twitch.png') !important; 
+}
+toolbarbutton#_74674eef-80d9-4cd3-af95-72ee34c0f2b6_-BAP .toolbarbutton-badge
+{ 
+	background-color: orange !important;
+
+}
+.toolbarbutton-badge 
+{
+	margin-left: 12px !important;
+}
+
+toolbarbutton#addon_hoarder_app-BAP .toolbarbutton-icon
+{
+  filter: brightness(0) saturate(100%) invert(100%) !important;
+}
+
+[data-extensionid="{446900e4-71c2-419f-a6a7-df9c091e268b}"] .toolbarbutton-icon {  
+  list-style-image: url('icons/bitwarden.svg') !important; 
+}
+
+[data-extensionid="uBlock0@raymondhill.net"] .toolbarbutton-icon {  
+  list-style-image: url('icons/ublock.svg') !important; 
+}
+
 /* Moved bookmark toolbar to the right hand side */
 @-moz-document url(chrome://browser/content/browser.xhtml){
 
@@ -117,6 +159,7 @@
   }
 
 /* browser toolbox prompt hack - set devtools.debugger.prompt-connection to false */
+
 /*? shimmer variables */
 :root {
 	/*? COLLAPSING SIDEBAR SETTINGS */
@@ -1311,29 +1354,3 @@ treecol {
 /*TODO some of the usual buttons that appear on the right-click context menu are hidden. right now you can change them at the top of `userChrome.css`. i will maybe later introduce `about:config` variables for easier customization */
 /*TODO autoscroller styles */
 /*TODO pointer events on urlbar*/
-
-
-/* Unified Extension Menu Compact */
-#unified-extensions-view{
-	--uei-icon-size: 16px;
-  }
-  .unified-extensions-item-menu-button.subviewbutton{
-	padding: 0px !important;
-	margin-inline-end: 0 !important;
-  }
-  .unified-extensions-item-action-button.subviewbutton{
-	padding-block: 6px !important;
-  }
-  .unified-extensions-item-menu-button.subviewbutton > .toolbarbutton-icon{
-	padding: 4px !important;
-  }
-  .unified-extensions-item-message-deck{
-	display: none
-  }
-  #unified-extensions-view > vbox > vbox > .unified-extensions-item{
-	padding-block: 0px !important;
-  }
-  #unified-extensions-panel .unified-extensions-item{
-	margin-block: 0 !important;
-  }
-  
